@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Termos de Uso</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar empresas, serviços..." />
+      <button onclick="realizarBusca()">Buscar</button>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section">
+      <h2>Uso da Plataforma</h2>
+      <p>O AgroBioConecta é uma plataforma de conexão entre empresas agroindustriais e clientes. Ao utilizar nossos serviços, você concorda com os termos descritos nesta página.</p>
+      
+      <h2>Responsabilidades</h2>
+      <p>O AgroBioConecta atua apenas como intermediário, facilitando o contato entre as partes. Todas as negociações comerciais são realizadas diretamente entre empresas e clientes.</p>
+      
+      <h2>Privacidade</h2>
+      <p>Respeitamos sua privacidade e protegemos suas informações de contato conforme a legislação vigente.</p>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 AgroBioConecta | Telefone: (19) 99709-3446</p>
+  </footer>
+
+  <script>
+    function realizarBusca() {
+      const termo = document.getElementById('search-input').value.toLowerCase();
+      if (termo) {
+        window.location.href = 'empresas.html?busca=' + encodeURIComponent(termo);
+      }
+    }
+
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        realizarBusca();
+      }
+    });
+  </script>
+</body>
+</html>

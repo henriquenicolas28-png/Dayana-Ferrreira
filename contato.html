@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Contato</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar empresas, serviços..." />
+      <button onclick="realizarBusca()">Buscar</button>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+  <main>
+    <div class="section">
+      <h3>Entre em contato conosco</h3>
+      <p><strong>Telefone:</strong> (19) 99709-3446</p>
+      <p><strong>E-mail:</strong> contato@agrobioconecta.com.br</p>
+      
+      <form action="mailto:contato@agrobioconecta.com.br" method="post" enctype="text/plain">
+        <label>Nome:</label>
+        <input type="text" name="nome" required />
+        <label>E-mail:</label>
+        <input type="email" name="email" required />
+        <label>Mensagem:</label>
+        <textarea name="mensagem" rows="5" required></textarea>
+        <p>O AgroBioConecta apenas conecta você à empresa. A negociação é direta.</p>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 AgroBioConecta | Telefone: (19) 99709-3446</p>
+  </footer>
+
+  <script>
+    function realizarBusca() {
+      const termo = document.getElementById('search-input').value.toLowerCase();
+      if (termo) {
+        window.location.href = 'empresas.html?busca=' + encodeURIComponent(termo);
+      }
+    }
+
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        realizarBusca();
+      }
+    });
+  </script>
+</body>
+</html>

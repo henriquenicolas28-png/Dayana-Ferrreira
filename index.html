@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AgroBioConecta</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar empresas, serviços..." />
+      <button onclick="realizarBusca()">Buscar</button>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="hero-image"></div>
+      <h2>Bem-vindo à plataforma AgroBioConecta</h2>
+      <p>Conectamos empresas agroindustriais a clientes de forma simples e transparente.</p>
+    </section>
+
+    <section class="website-importance">
+      <h2>Por que ter um site é essencial?</h2>
+      <div class="importance-content">
+        <p>No mundo digital de hoje, ter um site específico para sua empresa agroindustrial é fundamental para:</p>
+        <ul>
+          <li><strong>Acesso Rápido:</strong> Clientes encontram telefone e endereço instantaneamente, 24 horas por dia</li>
+          <li><strong>Credibilidade:</strong> Um site profissional transmite confiança e seriedade ao seu negócio</li>
+          <li><strong>Visibilidade:</strong> Apareça nas buscas do Google quando clientes procuram por seus serviços</li>
+          <li><strong>Informação Completa:</strong> Apresente todos os seus produtos, serviços e diferenciais em um só lugar</li>
+          <li><strong>Contato Direto:</strong> Facilite a comunicação com formulários e informações de contato sempre disponíveis</li>
+        </ul>
+        <p class="highlight">O AgroBioConecta ajuda sua empresa a ser encontrada rapidamente por quem precisa dos seus serviços!</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 AgroBioConecta | Telefone: (19) 99709-3446</p>
+  </footer>
+
+  <script>
+    function realizarBusca() {
+      const termo = document.getElementById('search-input').value.toLowerCase();
+      if (termo) {
+        window.location.href = 'empresas.html?busca=' + encodeURIComponent(termo);
+      }
+    }
+
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        realizarBusca();
+      }
+    });
+  </script>
+</body>
+</html>
