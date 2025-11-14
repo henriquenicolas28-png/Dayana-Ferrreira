@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas Sucroalcooleiras | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filtro { 
+      margin: 20px; 
+      padding: 15px; 
+      background-color: white; 
+      border-radius: 8px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: end;
+    }
+    .filtro label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    .filtro select {
+      width: 200px;
+      margin-top: 5px;
+    }
+    .empresa { 
+      background-color: white; 
+      padding: 20px; 
+      margin: 15px 20px; 
+      border-radius: 8px; 
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .empresa h3 { 
+      margin: 0 0 10px 0; 
+      color: #2e7d32;
+    }
+    .empresa p { 
+      margin: 8px 0; 
+      line-height: 1.6;
+    }
+    .empresa-header {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    .empresa-imagem {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 2px solid #e0e0e0;
+    }
+    .empresa-info {
+      flex: 1;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+    .badge.pequeno-produtor {
+      background-color: #ff9800;
+    }
+    .produtos {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    .produtos strong {
+      color: #2e7d32;
+    }
+    .contato-info {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .contato-info span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    #lista-empresas {
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="SOBRE.HTML">Sobre</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="CONTATO.HTML">Contato</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Empresas do Setor Sucroalcooleiro - Piracicaba e Região</h2>
+    <p>Conecte-se com usinas, produtores e empresas do setor sucroalcooleiro</p>
+
+    <div class="filtro">
+      <label>
+        Tipo de Produtor:
+        <select id="tipo">
+          <option value="">Todos</option>
+          <option value="usina">Usinas</option>
+          <option value="pequeno">Pequenos Produtores</option>
+          <option value="fornecedor">Fornecedores</option>
+        </select>
+      </label>
+
+      <label>
+        Cidade:
+        <select id="cidade">
+          <option value="">Todas</option>
+          <option value="piracicaba">Piracicaba</option>
+          <option value="santa-barbara">Santa Bárbara d'Oeste</option>
+          <option value="rio-das-pedras">Rio das Pedras</option>
+          <option value="americana">Americana</option>
+          <option value="limeira">Limeira</option>
+          <option value="araras">Araras</option>
+        </select>
+      </label>
+
+      <label>
+        Produto:
+        <select id="produto">
+          <option value="">Todos</option>
+          <option value="etanol">Etanol</option>
+          <option value="acucar">Açúcar</option>
+          <option value="energia">Energia</option>
+          <option value="cana">Cana-de-açúcar</option>
+        </select>
+      </label>
+
+      <button onclick="filtrarEmpresas()">Filtrar</button>
+    </div>
+
+    <div id="lista-empresas"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgroBioConecta</p>
+  </footer>
+
+  <script>
+    const empresas = [
+      {
+        nome: "Usina Costa Pinto",
+        tipo: "usina",
+        cidade: "piracicaba",
+        endereco: "Rodovia Piracicaba-Charqueada, km 4",
+        telefone: "(19) 3429-8000",
+        email: "contato@costapinto.com.br",
+        produtos: ["Etanol", "Açúcar", "Energia Elétrica"],
+        producao: "4 milhões de toneladas de cana/ano",
+        imagem: "images/usinas/costa-pinto.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "Usina Santa Bárbara",
+        tipo: "usina",
+        cidade: "santa-barbara",
+        endereco: "Fazenda Santa Bárbara, s/n",
+        telefone: "(19) 3499-1200",
+        email: "comercial@usantabarbara.com.br",
+        produtos: ["Etanol Hidratado", "Etanol Anidro", "Energia"],
+        producao: "2.5 milhões de toneladas de cana/ano",
+        imagem: "images/usinas/santa-barbara.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "Usina Iracema",
+        tipo: "usina",
+        cidade: "piracicaba",
+        endereco: "Av. Iracema, 2500",
+        telefone: "(19) 3417-5000",
+        email: "sac@iracema.com.br",
+        produtos: ["Açúcar Cristal", "Açúcar Refinado", "Etanol", "Melaço"],
+        producao: "3.2 milhões de toneladas de cana/ano",
+        imagem: "images/usinas/iracema.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "Cooperativa Agrícola Rio das Pedras",
+        tipo: "pequeno",
+        cidade: "rio-das-pedras",
+        endereco: "Rua dos Agricultores, 150",
+        telefone: "(19) 3493-2200",
+        email: "cooprio@agricola.com.br",
+        produtos: ["Cana-de-açúcar"],
+        producao: "500 mil toneladas de cana/ano",
+        imagem: "images/produtores/coop-rio-pedras.jpg",
+        pequeno_produtor: true
+      },
+      {
+        nome: "Fazenda São José - Família Silva",
+        tipo: "pequeno",
+        cidade: "piracicaba",
+        endereco: "Bairro Rural São José",
+        telefone: "(19) 99876-5432",
+        email: "fazenda.sj@gmail.com",
+        produtos: ["Cana-de-açúcar"],
+        producao: "200 mil toneladas de cana/ano",
+        imagem: "images/produtores/faz-sao-jose.jpg",
+        pequeno_produtor: true
+      },
+      {
+        nome: "Grupo Agro Limeira",
+        tipo: "pequeno",
+        cidade: "limeira",
+        endereco: "Sítio Santa Rita, Zona Rural",
+        telefone: "(19) 3441-8800",
+        email: "contato@agrolimeira.com.br",
+        produtos: ["Cana-de-açúcar", "Mudas"],
+        producao: "350 mil toneladas de cana/ano",
+        imagem: "images/produtores/agro-limeira.jpg",
+        pequeno_produtor: true
+      },
+      {
+        nome: "Usina Ester",
+        tipo: "usina",
+        cidade: "americana",
+        endereco: "Rodovia SP-304, km 145",
+        telefone: "(19) 3478-9000",
+        email: "relacionamento@usinaester.com.br",
+        produtos: ["Etanol", "Açúcar VHP", "Energia"],
+        producao: "2.8 milhões de toneladas de cana/ano",
+        imagem: "images/usinas/ester.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "BioEnergia Araras",
+        tipo: "usina",
+        cidade: "araras",
+        endereco: "Fazenda São João, Zona Rural",
+        telefone: "(19) 3544-2000",
+        email: "bioenergia@araras.ind.br",
+        produtos: ["Etanol 2G", "Energia", "Biogás"],
+        producao: "1.5 milhões de toneladas de cana/ano",
+        imagem: "images/usinas/bioenergia-araras.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "Fornecedora Agrícola Piracicaba",
+        tipo: "fornecedor",
+        cidade: "piracicaba",
+        endereco: "Av. Independência, 890",
+        telefone: "(19) 3422-7700",
+        email: "vendas@fornagro.com.br",
+        produtos: ["Insumos Agrícolas", "Equipamentos", "Defensivos"],
+        producao: "Fornecedor de insumos para o setor",
+        imagem: "images/fornecedores/fornagro.jpg",
+        pequeno_produtor: false
+      },
+      {
+        nome: "Sítio Boa Esperança",
+        tipo: "pequeno",
+        cidade: "santa-barbara",
+        endereco: "Estrada Municipal SBO-100, km 8",
+        telefone: "(19) 98765-4321",
+        email: "sitioboaesperanca@outlook.com",
+        produtos: ["Cana-de-açúcar"],
+        producao: "150 mil toneladas de cana/ano",
+        imagem: "images/produtores/boa-esperanca.jpg",
+        pequeno_produtor: true
+      }
+    ];
+
+    function filtrarEmpresas() {
+      const tipo = document.getElementById('tipo').value;
+      const cidade = document.getElementById('cidade').value;
+      const produto = document.getElementById('produto').value;
+      const lista = document.getElementById('lista-empresas');
+      lista.innerHTML = '';
+
+      const filtradas = empresas.filter(e => {
+        const matchTipo = !tipo || e.tipo === tipo;
+        const matchCidade = !cidade || e.cidade === cidade;
+        const matchProduto = !produto || e.produtos.some(p => 
+          p.toLowerCase().includes(produto.toLowerCase())
+        );
+        return matchTipo && matchCidade && matchProduto;
+      });
+
+      if (filtradas.length === 0) {
+        lista.innerHTML = '<div style="margin: 20px; padding: 20px; background: white; border-radius: 8px;"><p>Nenhuma empresa encontrada com os filtros selecionados.</p></div>';
+      } else {
+        filtradas.forEach(e => {
+          const badgePequeno = e.pequeno_produtor ? '<span class="badge pequeno-produtor">Pequeno Produtor</span>' : '';
+          const badgeTipo = !e.pequeno_produtor ? `<span class="badge">${formatarTipo(e.tipo)}</span>` : '';
+          
+          lista.innerHTML += `
+            <div class="empresa">
+              <div class="empresa-header">
+                <img src="${e.imagem}" alt="${e.nome}" class="empresa-imagem" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22150%22%3E%3Crect fill=%22%23e0e0e0%22 width=%22150%22 height=%22150%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2214%22 fill=%22%23999%22%3ESem imagem%3C/text%3E%3C/svg%3E'">
+                <div class="empresa-info">
+                  <h3>${e.nome} ${badgeTipo}${badgePequeno}</h3>
+                  <p><strong>📍 Localização:</strong> ${formatarCidade(e.cidade)}</p>
+                  <p><strong>📍 Endereço:</strong> ${e.endereco}</p>
+                  <div class="contato-info">
+                    <span><strong>📞</strong> ${e.telefone}</span>
+                    <span><strong>✉️</strong> <a href="mailto:${e.email}">${e.email}</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="produtos">
+                <p><strong>Produtos/Serviços:</strong> ${e.produtos.join(', ')}</p>
+                <p><strong>Produção:</strong> ${e.producao}</p>
+              </div>
+            </div>
+          `;
+        });
+      }
+    }
+
+    function formatarCidade(cidade) {
+      const cidades = {
+        "piracicaba": "Piracicaba",
+        "santa-barbara": "Santa Bárbara d'Oeste",
+        "rio-das-pedras": "Rio das Pedras",
+        "americana": "Americana",
+        "limeira": "Limeira",
+        "araras": "Araras"
+      };
+      return cidades[cidade] || cidade;
+    }
+
+    function formatarTipo(tipo) {
+      const tipos = {
+        "usina": "Usina",
+        "pequeno": "Pequeno Produtor",
+        "fornecedor": "Fornecedor"
+      };
+      return tipos[tipo] || tipo;
+    }
+
+    filtrarEmpresas();
+  </script>
+
+</body>
+</html>

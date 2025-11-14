@@ -1,0 +1,2758 @@
+<footer>
+  <div class="footer-section">
+    <h4>Apoio Institucional</h4>
+    <p>Fatec Piracicaba Deputado Roque Trevisan</p>
+  </div>
+
+  <div class="footer-section">
+    <h4>Desenvolvido por</h4>
+    <ul>
+      <li>Dayana [sobrenome ou RA, se quiser]</li>
+      <li>[Nome do aluno 2]</li>
+      <li>[Nome do aluno 3]</li>
+      <!-- Adicione mais conforme necessário -->
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <p>&copy; 2025 AgroBioConecta. Todos os direitos reservados.</p>
+  </div>
+</footer>
+<section id="equipe">
+  <h2>Equipe de Desenvolvimento</h2>
+  <p>Este site foi desenvolvido por alunos da Fatec Piracicaba Deputado Roque Trevisan como parte de um projeto acadêmico voltado para inovação no setor sucroalcooleiro.</p>
+  <ul>
+    <li>Dayana [sobrenome ou RA]</li>
+    <li>[Nome do aluno 2]</li>
+    <li>[Nome do aluno 3]</li>
+    <!-- Adicione mais nomes -->
+  </ul>
+</section>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #388e3c;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner {
+      background-image: url('banner-cana.jpg'); /* imagem ilustrativa */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .banner h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .section {
+      padding: 40px 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Conectando o agro, a bioenergia e os talentos de Piracicaba</p>
+  </header>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Empresas</a>
+    <a href="#">Estudantes</a>
+    <a href="#">Serviços</a>
+    <a href="#">Eventos</a>
+    <a href="#">Blog</a>
+    <a href="#">Entrar</a>
+  </nav>
+
+  <div class="banner">
+    <h1>Encontre fornecedores, serviços e talentos</h1>
+    <p>Explore oportunidades no setor sucroalcooleiro de Piracicaba</p>
+  </div>
+
+  <div class="section">
+    <h2>Encontre Fornecedores</h2>
+    <p>Busque por empresas locais que oferecem serviços e materiais para o setor sucroalcooleiro.</p>
+  </div>
+
+  <div class="section">
+    <h2>Conecte-se com Talentos</h2>
+    <p>Veja perfis de estudantes e profissionais disponíveis para estágio, trainee e contratação.</p>
+  </div>
+
+  <div class="section">
+    <h2>Eventos e Feiras</h2>
+    <p>Fique por dentro dos eventos técnicos, feiras e encontros do setor em Piracicaba.</p>
+  </div>
+
+  <div class="section">
+    <h2>Equipe de Desenvolvimento</h2>
+    <p>Este site foi desenvolvido por alunos da Fatec Piracicaba Deputado Roque Trevisan:</p>
+    <ul>
+      <li>Dayana [sobrenome ou RA]</li>
+      <li>[Nome do aluno 2]</li>
+      <li>[Nome do aluno 3]</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Apoio Institucional: Fatec Piracicaba Deputado Roque Trevisan</p>
+    <p>&copy; 2025 AgroBioConecta. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Empresas | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Cadastro de Empresas</p>
+  </header>
+
+  <div class="container">
+    <h2>Cadastre sua empresa</h2>
+    <form>
+      <label for="nome">Nome da Empresa</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="cnpj">CNPJ</label>
+      <input type="text" id="cnpj" name="cnpj" required />
+
+      <label for="email">E-mail de Contato</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" />
+
+      <label for="endereco">Endereço</label>
+      <input type="text" id="endereco" name="endereco" />
+
+      <label for="servicos">Serviços ou Materiais Oferecidos</label>
+      <textarea id="servicos" name="servicos" rows="4"></textarea>
+
+      <label for="categoria">Categoria</label>
+      <select id="categoria" name="categoria">
+        <option value="manutencao">Manutenção Industrial</option>
+        <option value="pecas">Peças e Equipamentos</option>
+        <option value="consultoria">Consultoria Agronômica</option>
+        <option value="transporte">Transporte e Logística</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <button type="submit">Cadastrar Empresa</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Estudantes | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Cadastro de Estudantes</p>
+  </header>
+
+  <div class="container">
+    <h2>Cadastre seu perfil</h2>
+    <form>
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="ra">RA (Registro Acadêmico)</label>
+      <input type="text" id="ra" name="ra" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="curso">Curso</label>
+      <input type="text" id="curso" name="curso" required />
+
+      <label for="instituicao">Instituição</label>
+      <input type="text" id="instituicao" name="instituicao" value="Fatec Piracicaba Deputado Roque Trevisan" readonly />
+
+      <label for="habilidades">Habilidades e Competências</label>
+      <textarea id="habilidades" name="habilidades" rows="4"></textarea>
+
+      <label for="disponibilidade">Disponibilidade</label>
+      <select id="disponibilidade" name="disponibilidade">
+        <option value="estagio">Estágio</option>
+        <option value="trainee">Trainee</option>
+        <option value="tempo-integral">Tempo Integral</option>
+        <option value="meio-periodo">Meio Período</option>
+      </select>
+
+      <button type="submit">Cadastrar Perfil</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar Talentos | AgroBioConecta</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+    header { background-color: #2e7d32; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 800px; margin: 40px auto; background-color: white; padding: 30px; border-radius: 8px; }
+    h2 { color: #2e7d32; margin-bottom: 20px; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, select { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    .result { background-color: #e8f5e9; padding: 15px; margin-top: 20px; border-radius: 6px; }
+    button { margin-top: 20px; padding: 10px 20px; background-color: #388e3c; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #2e7d32; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Buscar Talentos</p>
+  </header>
+
+  <div class="container">
+    <h2>Filtrar Estudantes</h2>
+    <form id="filtroForm">
+      <label for="curso">Curso</label>
+      <input type="text" id="curso" name="curso" />
+
+      <label for="habilidades">Habilidades (palavras-chave)</label>
+      <input type="text" id="habilidades" name="habilidades" />
+
+      <label for="disponibilidade">Disponibilidade</label>
+      <select id="disponibilidade" name="disponibilidade">
+        <option value="">-- Selecione --</option>
+        <option value="estagio">Estágio</option>
+        <option value="trainee">Trainee</option>
+        <option value="tempo-integral">Tempo Integral</option>
+        <option value="meio-periodo">Meio Período</option>
+      </select>
+
+      <button type="button" onclick="buscarTalentos()">Buscar</button>
+    </form>
+
+    <div id="resultados"></div>
+  </div>
+
+  <script>
+    function buscarTalentos() {
+      const curso = document.getElementById('curso').value.toLowerCase();
+      const habilidades = document.getElementById('habilidades').value.toLowerCase();
+      const disponibilidade = document.getElementById('disponibilidade').value;
+
+      // Simulação de dados
+      const estudantes = [
+        {
+          nome: "Dayana Silva",
+          curso: "Gestão Empresarial",
+          habilidades: "Excel, planejamento, comunicação",
+          disponibilidade: "estagio"
+        },
+        {
+          nome: "Carlos Mendes",
+          curso: "Análise e Desenvolvimento de Sistemas",
+          habilidades: "JavaScript, HTML, CSS",
+          disponibilidade: "tempo-integral"
+        }
+      ];
+
+      const resultados = estudantes.filter(e => {
+        return (
+          (!curso || e.curso.toLowerCase().includes(curso)) &&
+          (!habilidades || e.habilidades.toLowerCase().includes(habilidades)) &&
+          (!disponibilidade || e.disponibilidade === disponibilidade)
+        );
+      });
+
+      const container = document.getElementById('resultados');
+      container.innerHTML = '';
+
+      if (resultados.length === 0) {
+        container.innerHTML = '<p>Nenhum estudante encontrado com os critérios selecionados.</p>';
+      } else {
+        resultados.forEach(e => {
+          container.innerHTML += `
+            <div class="result">
+              <strong>${e.nome}</strong><br/>
+              Curso: ${e.curso}<br/>
+              Habilidades: ${e.habilidades}<br/>
+              Disponibilidade: ${e.disponibilidade}<br/>
+              <button>Ver Perfil</button>
+            </div>
+          `;
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Estudante | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    .info {
+      margin-bottom: 15px;
+    }
+    .info strong {
+      display: inline-block;
+      width: 150px;
+      color: #555;
+    }
+    .contact-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Perfil do Estudante</p>
+  </header>
+
+  <div class="container">
+    <h2>Dayana Silva</h2>
+
+    <div class="info"><strong>RA:</strong> 123456789</div>
+    <div class="info"><strong>Curso:</strong> Gestão Empresarial</div>
+    <div class="info"><strong>Instituição:</strong> Fatec Piracicaba Deputado Roque Trevisan</div>
+    <div class="info"><strong>E-mail:</strong> dayana@email.com</div>
+    <div class="info"><strong>Habilidades:</strong> Excel, planejamento estratégico, comunicação, trabalho em equipe</div>
+    <div class="info"><strong>Disponibilidade:</strong> Estágio</div>
+
+    <button class="contact-button">Entrar em contato</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato com Estudante | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Contato com Estudante</p>
+  </header>
+
+  <div class="container">
+    <h2>Enviar mensagem para Dayana Silva</h2>
+    <form>
+      <label for="empresa">Nome da Empresa</label>
+      <input type="text" id="empresa" name="empresa" required />
+
+      <label for="email">E-mail para resposta</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o interesse, proposta ou dúvida..." required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<form action="confirmacao.html" method="POST">
+  <label for="empresa">Nome da Empresa</label>
+  <input type="text" id="empresa" name="empresa" required />
+
+  <label for="email">E-mail para resposta</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="mensagem">Mensagem</label>
+  <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+  <button type="submit">Enviar Mensagem</button>
+</form>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem Enviada | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    a:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mensagem Enviada com Sucesso!</h1>
+    <p>Obrigado por entrar em contato com o estudante. Ele(a) receberá sua mensagem em breve.</p>
+    <a href="index.html">Voltar para a página inicial</a>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Mensagens | AgroBioConecta</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+    header { background-color: #2e7d32; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 800px; margin: 40px auto; background-color: white; padding: 30px; border-radius: 8px; }
+    h2 { color: #2e7d32; margin-bottom: 20px; }
+    .mensagem { background-color: #e8f5e9; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+    .mensagem h3 { margin: 0; }
+    .mensagem p { margin: 5px 0; }
+    .status { font-size: 0.9em; color: #555; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Painel de Mensagens</p>
+  </header>
+
+  <div class="container">
+    <h2>Mensagens Recebidas</h2>
+
+    <div class="mensagem">
+      <h3>Empresa: BioEnergia Piracicaba</h3>
+      <p><strong>E-mail:</strong> contato@bioenergia.com.br</p>
+      <p><strong>Data:</strong> 08/11/2025</p>
+      <p><strong>Mensagem:</strong> Olá Dayana, gostaríamos de conversar sobre uma oportunidade de estágio em planejamento estratégico.</p>
+      <p class="status">Status: Não lida</p>
+    </div>
+
+    <div class="mensagem">
+      <h3>Empresa: AgroTech Solutions</h3>
+      <p><strong>E-mail:</strong> rh@agrotech.com</p>
+      <p><strong>Data:</strong> 05/11/2025</p>
+      <p><strong>Mensagem:</strong> Parabéns pelo seu perfil! Temos uma vaga de trainee em gestão de projetos e gostaríamos de agendar uma entrevista.</p>
+      <p class="status">Status: Lida</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroTechs | AgroBioConecta</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+    header { background-color: #2e7d32; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 900px; margin: 40px auto; background-color: white; padding: 30px; border-radius: 8px; }
+    h2 { color: #2e7d32; margin-bottom: 20px; }
+    .section { margin-bottom: 30px; }
+    .card { background-color: #e8f5e9; padding: 20px; border-radius: 6px; margin-bottom: 15px; }
+    .card h3 { margin: 0 0 10px 0; }
+    .card p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Setor de Tecnologia e Inovação</p>
+  </header>
+
+  <div class="container">
+    <h2>AgroTechs em Piracicaba</h2>
+
+    <div class="section">
+      <p>O setor de tecnologia aplicada ao agronegócio está em plena expansão em Piracicaba. Startups, laboratórios e empresas de software estão desenvolvendo soluções para monitoramento de lavouras, automação de usinas, gestão de dados e sustentabilidade.</p>
+    </div>
+
+    <div class="section">
+      <h3>Empresas em Destaque</h3>
+      <div class="card">
+        <h3>AgroTech Solutions</h3>
+        <p><strong>Área:</strong> Monitoramento remoto de lavouras</p>
+        <p><strong>Contato:</strong> contato@agrotech.com</p>
+      </div>
+      <div class="card">
+        <h3>BioData Inteligência</h3>
+        <p><strong>Área:</strong> Big Data e IA para usinas</p>
+        <p><strong>Contato:</strong> biodata@bioenergia.com.br</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Oportunidades para Estudantes</h3>
+      <ul>
+        <li>Estágio em desenvolvimento web e mobile</li>
+        <li>Projetos de pesquisa com sensores e IoT</li>
+        <li>Hackathons em parceria com o Parque Tecnológico</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Eventos e Iniciativas</h3>
+      <p>Fique atento aos eventos como o <strong>AgTech Garage</strong>, <strong>HackCana</strong> e <strong>Semana da Inovação Agro</strong>, que conectam talentos e empresas da região.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustentabilidade e Energia | AgroBioConecta</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+    header { background-color: #2e7d32; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 900px; margin: 40px auto; background-color: white; padding: 30px; border-radius: 8px; }
+    h2 { color: #2e7d32; margin-bottom: 20px; }
+    .section { margin-bottom: 30px; }
+    .card { background-color: #e0f2f1; padding: 20px; border-radius: 6px; margin-bottom: 15px; }
+    .card h3 { margin: 0 0 10px 0; }
+    .card p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Setor de Sustentabilidade e Energia Renovável</p>
+  </header>
+
+  <div class="container">
+    <h2>Energia limpa e inovação ambiental</h2>
+
+    <div class="section">
+      <p>O setor de sustentabilidade e energia renovável é essencial para o futuro do agronegócio. Em Piracicaba, diversas empresas e projetos estão investindo em biogás, biomassa, energia solar e reaproveitamento de resíduos da cana-de-açúcar.</p>
+    </div>
+
+    <div class="section">
+      <h3>Empresas e Iniciativas</h3>
+      <div class="card">
+        <h3>EcoCana Energia</h3>
+        <p><strong>Área:</strong> Geração de energia a partir de biomassa</p>
+        <p><strong>Contato:</strong> contato@ecocana.com.br</p>
+      </div>
+      <div class="card">
+        <h3>VerdeSolar Agro</h3>
+        <p><strong>Área:</strong> Sistemas fotovoltaicos para propriedades rurais</p>
+        <p><strong>Contato:</strong> energia@verdesolar.com</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Oportunidades para Estudantes</h3>
+      <ul>
+        <li>Estágio em projetos de energia limpa</li>
+        <li>Consultoria ambiental e gestão de resíduos</li>
+        <li>Projetos integrados com cursos de química, meio ambiente e engenharia</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Eventos e Parcerias</h3>
+      <p>Participe de eventos como o <strong>Fórum de Bioenergia</strong>, <strong>Semana do Meio Ambiente</strong> e <strong>Feiras de Sustentabilidade</strong> promovidas por universidades e empresas da região.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logística e Transporte | AgroBioConecta</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+    header { background-color: #2e7d32; color: white; padding: 20px; text-align: center; }
+    .container { max-width: 900px; margin: 40px auto; background-color: white; padding: 30px; border-radius: 8px; }
+    h2 { color: #2e7d32; margin-bottom: 20px; }
+    .section { margin-bottom: 30px; }
+    .card { background-color: #fffde7; padding: 20px; border-radius: 6px; margin-bottom: 15px; border-left: 5px solid #fbc02d; }
+    .card h3 { margin: 0 0 10px 0; }
+    .card p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Setor de Logística e Transporte</p>
+  </header>
+
+  <div class="container">
+    <h2>Mobilidade e eficiência no agro</h2>
+
+    <div class="section">
+      <p>O setor de logística e transporte é fundamental para o escoamento da produção agrícola, distribuição de insumos e operação das usinas. Em Piracicaba, empresas especializadas oferecem soluções em transporte rodoviário, rastreamento, manutenção de frotas e logística integrada.</p>
+    </div>
+
+    <div class="section">
+      <h3>Empresas em Destaque</h3>
+      <div class="card">
+        <h3>TransCana Logística</h3>
+        <p><strong>Área:</strong> Transporte de cana e derivados</p>
+        <p><strong>Contato:</strong> atendimento@transcana.com.br</p>
+      </div>
+      <div class="card">
+        <h3>AgroRota Sistemas</h3>
+        <p><strong>Área:</strong> Roteirização e rastreamento de frotas</p>
+        <p><strong>Contato:</strong> suporte@agrorota.com</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Oportunidades para Estudantes</h3>
+      <ul>
+        <li>Estágio em logística e planejamento de rotas</li>
+        <li>Manutenção de veículos agrícolas e caminhões</li>
+        <li>Projetos com foco em eficiência operacional e redução de custos logísticos</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Conexões com o Setor</h3>
+      <p>Empresas de transporte e logística podem se cadastrar na plataforma para divulgar seus serviços e buscar talentos técnicos e operacionais formados na Fatec e instituições parceiras.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setores | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background-color: white;
+      width: 220px;
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      margin-top: 15px;
+      color: #2e7d32;
+    }
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AgroBioConecta</h1>
+    <p>Explore os setores conectados</p>
+  </header>
+
+  <div class="menu">
+    <div class="card" onclick="location.href='sucroalcooleiro.html'">
+      <img src="icone-cana.png" alt="Sucroalcooleiro" />
+      <h3>Sucroalcooleiro</h3>
+    </div>
+
+    <div class="card" onclick="location.href='agrotechs.html'">
+      <img src="icone-tech.png" alt="AgroTechs" />
+      <h3>Tecnologia e Inovação</h3>
+    </div>
+
+    <div class="card" onclick="location.href='sustentabilidade.html'">
+      <img src="icone-verde.png" alt="Sustentabilidade" />
+      <h3>Energia Renovável</h3>
+    </div>
+
+    <div class="card" onclick="location.href='logistica.html'">
+      <img src="icone-caminhao.png" alt="Logística" />
+      <h3>Logística e Transporte</h3>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Setorial | AgroBioConecta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #2e7d32;
+      color: white;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 1.4em;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .menu-item:hover {
+      background-color: #388e3c;
+    }
+    .menu-item img {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Setores</h2>
+    <div class="menu-item" onclick="location.href='sucroalcooleiro.html'">
+      <img src="icone-cana.png" alt="Sucroalcooleiro" />
+      <span>Sucroalcooleiro</span>
+    </div>
+    <div class="menu-item" onclick="location.href='agrotechs.html'">
+      <img src="icone-tech.png" alt="AgroTechs" />
+      <span>Tecnologia e Inovação</span>
+    </div>
+    <div class="menu-item" onclick="location.href='sustentabilidade.html'">
+      <img src="icone-verde.png" alt="Sustentabilidade" />
+      <span>Energia Renovável</span>
+    </div>
+    <div class="menu-item" onclick="location.href='logistica.html'">
+      <img src="icone-caminhao.png" alt="Logística" />
+      <span>Logística e Transporte</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Bem-vindo ao AgroBioConecta</h1>
+    <p>Selecione um setor no menu lateral para explorar empresas, oportunidades e eventos relacionados.</p>
+  </div>
+
+</body>
+</html>
+<!-- menu-lateral.html -->
+<div class="sidebar">
+  <h2>Setores</h2>
+  <div class="menu-item" onclick="location.href='sucroalcooleiro.html'">
+    <img src="icone-cana.png" alt="Sucroalcooleiro" />
+    <span>Sucroalcooleiro</span>
+  </div>
+  <div class="menu-item" onclick="location.href='agrotechs.html'">
+    <img src="icone-tech.png" alt="AgroTechs" />
+    <span>Tecnologia e Inovação</span>
+  </div>
+  <div class="menu-item" onclick="location.href='sustentabilidade.html'">
+    <img src="icone-verde.png" alt="Sustentabilidade" />
+    <span>Energia Renovável</span>
+  </div>
+  <div class="menu-item" onclick="location.href='logistica.html'">
+    <img src="icone-caminhao.png" alt="Logística" />
+    <span>Logística e Transporte</span>
+  </div>
+</div>
+<body>
+  <div id="menu-container"></div>
+
+  <div class="content">
+    <!-- Conteúdo da página -->
+  </div>
+
+  <script>
+    fetch('menu-lateral.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+      });
+  </script>
+</body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Máquinas e Serviços | AgroBioConecta</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg'); /* Substitua pelo caminho da imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    .filtros {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .filtros select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      width: 220px;
+    }
+    .cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0;
+      color: #2e7d32;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <h1>Máquinas e Serviços para o Agro</h1>
+    <p>Encontre equipamentos agrícolas, serviços de manutenção e soluções tecnológicas para o setor canavieiro.</p>
+
+    <div class="filtros">
+      <select>
+        <option>Tipo de Equipamento</option>
+        <option>Colhedora</option>
+        <option>Transmissão</option>
+        <option>Caldeira</option>
+      </select>
+      <select>
+        <option>Serviço</option>
+        <option>Locação</option>
+        <option>Venda</option>
+        <option>Manutenção</option>
+      </select>
+      <select>
+        <option>Região</option>
+        <option>Piracicaba</option>
+        <option>Santa Bárbara</option>
+        <option>Limeira</option>
+      </select>
+      <select>
+        <option>Disponibilidade</option>
+        <option>Imediata</option>
+        <option>Agendada</option>
+      </select>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="colhedora.jpg" alt="Colhedora CanaMax 5000" />
+        <h3>Colhedora CanaMax 5000</h3>
+        <p><strong>Empresa:</strong> AgroMec Piracicaba</p>
+        <p>Locação e Venda</p>
+        <button>Solicitar Orçamento</button>
+      </div>
+
+      <div class="card">
+        <img src="transmissao.jpg" alt="Transmissão TR2000" />
+        <h3>Transmissão TR2000</h3>
+        <p><strong>Empresa:</strong> Engemec Sistemas</p>
+        <p>Manutenção de Transmissões</p>
+        <button>Solicitar Orçamento</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Serviços | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg'); /* Substitua pelo caminho da imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Cadastro de Máquinas e Serviços</h1>
+    <form>
+      <label for="empresa">Nome da Empresa</label>
+      <input type="text" id="empresa" name="empresa" required />
+
+      <label for="email">E-mail de Contato</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="equipamento">Nome do Equipamento ou Serviço</label>
+      <input type="text" id="equipamento" name="equipamento" required />
+
+      <label for="tipo">Tipo de Serviço</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione</option>
+        <option value="locacao">Locação</option>
+        <option value="venda">Venda</option>
+        <option value="manutencao">Manutenção</option>
+      </select>
+
+      <label for="regiao">Região Atendida</label>
+      <input type="text" id="regiao" name="regiao" placeholder="Ex: Piracicaba, Limeira, Santa Bárbara" required />
+
+      <label for="descricao">Descrição Técnica</label>
+      <textarea id="descricao" name="descricao" rows="5" placeholder="Detalhes técnicos, capacidade, aplicação..." required></textarea>
+
+      <label for="imagem">Imagem do Equipamento (URL)</label>
+      <input type="url" id="imagem" name="imagem" placeholder="https://exemplo.com/imagem.jpg" />
+
+      <button type="submit">Cadastrar Serviço</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro Confirmado | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg'); /* Substitua pelo caminho da imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #388e3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    a:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Cadastro Realizado com Sucesso!</h1>
+    <p>Obrigado por cadastrar seu serviço ou equipamento. Ele será exibido na plataforma AgroBioConecta após revisão.</p>
+    <a href="maquinas-servicos.html">Voltar para a página de serviços</a>
+  </div>
+
+</body>
+</html>
+<form action="confirmacao.html" method="POST">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | AgroBioConecta Empresas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg'); /* Substitua pelo caminho da imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+    .link {
+      margin-top: 15px;
+      display: block;
+      font-size: 0.9em;
+      color: #2e7d32;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Login da Empresa</h1>
+    <form action="painel-empresa.html" method="POST">
+      <input type="email" placeholder="E-mail da empresa" required />
+      <input type="password" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+    <a href="cadastro-empresa.html" class="link">Ainda não tem cadastro? Clique aqui</a>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Empresa | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg'); /* Substitua pelo caminho da imagem */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Cadastro de Empresa</h1>
+    <form action="confirmacao.html" method="POST">
+      <label for="nome">Nome da Empresa</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail de Contato</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" required />
+
+      <label for="cidade">Cidade / Região</label>
+      <input type="text" id="cidade" name="cidade" required />
+
+      <label for="descricao">Descrição da Empresa</label>
+      <textarea id="descricao" name="descricao" rows="5" placeholder="Área de atuação, especialidades, histórico..." required></textarea>
+
+      <button type="submit">Cadastrar Empresa</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .painel {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .servico {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .servico h3 {
+      margin: 0;
+      color: #2e7d32;
+    }
+    .servico p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .botoes {
+      margin-top: 10px;
+    }
+    .botoes button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95em;
+    }
+    .editar {
+      background-color: #0288d1;
+      color: white;
+    }
+    .remover {
+      background-color: #d32f2f;
+      color: white;
+    }
+    .editar:hover {
+      background-color: #0277bd;
+    }
+    .remover:hover {
+      background-color: #c62828;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Bem-vindo ao Painel da Empresa</h1>
+
+    <div class="servico">
+      <h3>Colhedora CanaMax 5000</h3>
+      <p><strong>Serviço:</strong> Locação e Venda</p>
+      <p><strong>Região:</strong> Piracicaba, Limeira</p>
+      <p><strong>Descrição:</strong> Equipamento de alta performance para colheita mecanizada de cana-de-açúcar.</p>
+      <div class="botoes">
+        <button class="editar">Editar</button>
+        <button class="remover">Remover</button>
+      </div>
+    </div>
+
+    <div class="servico">
+      <h3>Transmissão TR2000</h3>
+      <p><strong>Serviço:</strong> Manutenção</p>
+      <p><strong>Região:</strong> Santa Bárbara d'Oeste</p>
+      <p><strong>Descrição:</strong> Sistema de transmissão para moendas e esteiras industriais.</p>
+      <div class="botoes">
+        <button class="editar">Editar</button>
+        <button class="remover">Remover</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .painel {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .novo-servico {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+    .novo-servico a {
+      background-color: #388e3c;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    .novo-servico a:hover {
+      background-color: #2e7d32;
+    }
+    .servico {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .servico h3 {
+      margin: 0;
+      color: #2e7d32;
+    }
+    .servico p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .botoes {
+      margin-top: 10px;
+    }
+    .botoes button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95em;
+    }
+    .editar {
+      background-color: #0288d1;
+      color: white;
+    }
+    .remover {
+      background-color: #d32f2f;
+      color: white;
+    }
+    .editar:hover {
+      background-color: #0277bd;
+    }
+    .remover:hover {
+      background-color: #c62828;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Bem-vindo ao Painel da Empresa</h1>
+
+    <div class="novo-servico">
+      <a href="cadastro-servico.html">+ Cadastrar Novo Serviço</a>
+    </div>
+
+    <div class="servico">
+      <h3>Colhedora CanaMax 5000</h3>
+      <p><strong>Serviço:</strong> Locação e Venda</p>
+      <p><strong>Região:</strong> Piracicaba, Limeira</p>
+      <p><strong>Descrição:</strong> Equipamento de alta performance para colheita mecanizada de cana-de-açúcar.</p>
+      <div class="botoes">
+        <button class="editar">Editar</button>
+        <button class="remover">Remover</button>
+      </div>
+    </div>
+
+    <div class="servico">
+      <h3>Transmissão TR2000</h3>
+      <p><strong>Serviço:</strong> Manutenção</p>
+      <p><strong>Região:</strong> Santa Bárbara d'Oeste</p>
+      <p><strong>Descrição:</strong> Sistema de transmissão para moendas e esteiras industriais.</p>
+      <div class="botoes">
+        <button class="editar">Editar</button>
+        <button class="remover">Remover</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Serviço | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0277bd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Editar Serviço</h1>
+    <form action="confirmacao.html" method="POST">
+      <label for="equipamento">Nome do Equipamento ou Serviço</label>
+      <input type="text" id="equipamento" name="equipamento" value="Colhedora CanaMax 5000" required />
+
+      <label for="tipo">Tipo de Serviço</label>
+      <select id="tipo" name="tipo" required>
+        <option value="locacao" selected>Locação</option>
+        <option value="venda">Venda</option>
+        <option value="manutencao">Manutenção</option>
+      </select>
+
+      <label for="regiao">Região Atendida</label>
+      <input type="text" id="regiao" name="regiao" value="Piracicaba, Limeira" required />
+
+      <label for="descricao">Descrição Técnica</label>
+      <textarea id="descricao" name="descricao" rows="5">Equipamento de alta performance para colheita mecanizada de cana-de-açúcar.</textarea>
+
+      <label for="imagem">Imagem do Equipamento (URL)</label>
+      <input type="url" id="imagem" name="imagem" value="https://exemplo.com/colhedora.jpg" />
+
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar Serviço | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0277bd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Editar Serviço</h1>
+    <form action="confirmacao.html" method="POST">
+      <label for="equipamento">Nome do Equipamento ou Serviço</label>
+      <input type="text" id="equipamento" name="equipamento" value="Transmissão TR2000" required />
+
+      <label for="tipo">Tipo de Serviço</label>
+      <select id="tipo" name="tipo" required>
+        <option value="locacao">Locação</option>
+        <option value="venda">Venda</option>
+        <option value="manutencao" selected>Manutenção</option>
+      </select>
+
+      <label for="regiao">Região Atendida</label>
+      <input type="text" id="regiao" name="regiao" value="Santa Bárbara d'Oeste" required />
+
+      <label for="descricao">Descrição Técnica</label>
+      <textarea id="descricao" name="descricao" rows="5">Sistema de transmissão para moendas e esteiras industriais.</textarea>
+
+      <label for="imagem">Imagem do Equipamento (URL)</label>
+      <input type="url" id="imagem" name="imagem" value="https://exemplo.com/transmissao.jpg" />
+
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estatísticas | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .estatisticas {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .box {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .box h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #2e7d32;
+    }
+    .box p {
+      margin: 5px 0 0;
+      color: #555;
+    }
+    .solicitacoes {
+      margin-top: 20px;
+    }
+    .solicitacao {
+      background-color: #f9f9f9;
+      border-left: 5px solid #2e7d32;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+    .solicitacao h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #2e7d32;
+    }
+    .solicitacao p {
+      margin: 5px 0;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Estatísticas e Solicitações Recebidas</h1>
+
+    <div class="estatisticas">
+      <div class="box">
+        <h2>128</h2>
+        <p>Visualizações de Serviços</p>
+      </div>
+      <div class="box">
+        <h2>12</h2>
+        <p>Solicitações de Orçamento</p>
+      </div>
+      <div class="box">
+        <h2>3</h2>
+        <p>Serviços Ativos</p>
+      </div>
+    </div>
+
+    <div class="solicitacoes">
+      <div class="solicitacao">
+        <h3>Solicitação de Orçamento</h3>
+        <p><strong>Equipamento:</strong> Colhedora CanaMax 5000</p>
+        <p><strong>Nome:</strong> João Silva</p>
+        <p><strong>E-mail:</strong> joao.silva@email.com</p>
+        <p><strong>Mensagem:</strong> Gostaria de saber o valor da locação para 30 dias em Piracicaba.</p>
+      </div>
+
+      <div class="solicitacao">
+        <h3>Solicitação de Orçamento</h3>
+        <p><strong>Equipamento:</strong> Transmissão TR2000</p>
+        <p><strong>Nome:</strong> Carla Mendes</p>
+        <p><strong>E-mail:</strong> carla.mendes@email.com</p>
+        <p><strong>Mensagem:</strong> Preciso de manutenção urgente em Santa Bárbara. Vocês atendem essa região?</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitações | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filtros {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .filtros select, .filtros input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    .solicitacao {
+      background-color: #f9f9f9;
+      border-left: 5px solid #2e7d32;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    .solicitacao h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #2e7d32;
+    }
+    .solicitacao p {
+      margin: 5px 0;
+      color: #444;
+    }
+    .resposta {
+      margin-top: 10px;
+    }
+    .resposta textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    .resposta button {
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .resposta button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Solicitações Recebidas</h1>
+
+    <div class="filtros">
+      <select>
+        <option>Filtrar por Equipamento</option>
+        <option>Colhedora CanaMax 5000</option>
+        <option>Transmissão TR2000</option>
+      </select>
+      <input type="date" />
+      <input type="date" />
+    </div>
+
+    <div class="solicitacao">
+      <h3>Solicitação de Orçamento</h3>
+      <p><strong>Equipamento:</strong> Colhedora CanaMax 5000</p>
+      <p><strong>Nome:</strong> João Silva</p>
+      <p><strong>E-mail:</strong> joao@email.com</p>
+      <p><strong>Mensagem:</strong> Gostaria de saber o valor da locação para 30 dias em Piracicaba.</p>
+      <div class="resposta">
+        <textarea rows="3" placeholder="Escreva sua resposta aqui..."></textarea>
+        <button>Enviar Resposta</button>
+      </div>
+    </div>
+
+    <div class="solicitacao">
+      <h3>Solicitação de Orçamento</h3>
+      <p><strong>Equipamento:</strong> Transmissão TR2000</p>
+      <p><strong>Nome:</strong> Carla Mendes</p>
+      <p><strong>E-mail:</strong> carla@email.com</p>
+      <p><strong>Mensagem:</strong> Preciso de manutenção urgente em Santa Bárbara. Vocês atendem essa região?</p>
+      <div class="resposta">
+        <textarea rows="3" placeholder="Escreva sua resposta aqui..."></textarea>
+        <button>Enviar Resposta</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .painel {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .abas {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .abas button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ccc;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .abas button.ativo {
+      background-color: #2e7d32;
+      color: white;
+    }
+    .conteudo {
+      display: none;
+    }
+    .conteudo.ativo {
+      display: block;
+    }
+    .servico, .solicitacao, .box {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .box {
+      text-align: center;
+    }
+    .box h2 {
+      font-size: 2em;
+      color: #2e7d32;
+      margin: 0;
+    }
+    .box p {
+      color: #555;
+      margin: 5px 0 0;
+    }
+    .resposta textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .resposta button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Painel da Empresa</h1>
+
+    <div class="abas">
+      <button class="ativo" onclick="mostrarAba('servicos')">Serviços</button>
+      <button onclick="mostrarAba('estatisticas')">Estatísticas</button>
+      <button onclick="mostrarAba('solicitacoes')">Solicitações</button>
+    </div>
+
+    <div id="servicos" class="conteudo ativo">
+      <div class="servico">
+        <h3>Colhedora CanaMax 5000</h3>
+        <p><strong>Serviço:</strong> Locação e Venda</p>
+        <p><strong>Região:</strong> Piracicaba, Limeira</p>
+        <p><strong>Descrição:</strong> Equipamento de alta performance para colheita mecanizada de cana-de-açúcar.</p>
+      </div>
+      <div class="servico">
+        <h3>Transmissão TR2000</h3>
+        <p><strong>Serviço:</strong> Manutenção</p>
+        <p><strong>Região:</strong> Santa Bárbara d'Oeste</p>
+        <p><strong>Descrição:</strong> Sistema de transmissão para moendas e esteiras industriais.</p>
+      </div>
+    </div>
+
+    <div id="estatisticas" class="conteudo">
+      <div class="box">
+        <h2>128</h2>
+        <p>Visualizações de Serviços</p>
+      </div>
+      <div class="box">
+        <h2>12</h2>
+        <p>Solicitações de Orçamento</p>
+      </div>
+      <div class="box">
+        <h2>3</h2>
+        <p>Serviços Ativos</p>
+      </div>
+    </div>
+
+    <div id="solicitacoes" class="conteudo">
+      <div class="solicitacao">
+        <h3>Solicitação de Orçamento</h3>
+        <p><strong>Equipamento:</strong> Colhedora CanaMax 5000</p>
+        <p><strong>Nome:</strong> João Silva</p>
+        <p><strong>Mensagem:</strong> Gostaria de saber o valor da locação para 30 dias em Piracicaba.</p>
+        <div class="resposta">
+          <textarea rows="3" placeholder="Escreva sua resposta aqui..."></textarea>
+          <button>Enviar Resposta</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function mostrarAba(id) {
+      document.querySelectorAll('.conteudo').forEach(div => div.classList.remove('ativo'));
+      document.querySelectorAll('.abas button').forEach(btn => btn.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+      event.target.classList.add('ativo');
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel da Empresa | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('folhas-cana.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .painel {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .abas {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .abas button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ccc;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+    .abas button.ativo {
+      background-color: #2e7d32;
+      color: white;
+    }
+    .notificacao {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 0.8em;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+    .conteudo {
+      display: none;
+    }
+    .conteudo.ativo {
+      display: block;
+    }
+    .servico, .solicitacao, .box {
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .box {
+      text-align: center;
+    }
+    .box h2 {
+      font-size: 2em;
+      color: #2e7d32;
+      margin: 0;
+    }
+    .box p {
+      color: #555;
+      margin: 5px 0 0;
+    }
+    .resposta textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+    .resposta button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .abas {
+        flex-direction: column;
+        align-items: center;
+      }
+      .painel {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>Painel da Empresa</h1>
+
+    <div class="abas">
+      <button class="ativo" onclick="mostrarAba('servicos')">Serviços</button>
+      <button onclick="mostrarAba('estatisticas')">Estatísticas</button>
+      <button onclick="mostrarAba('solicitacoes')">
+        Solicitações <span class="notificacao">2</span>
+      </button>
+    </div>
+
+    <div id="servicos" class="conteudo ativo">
+      <div class="servico">
+        <h3>Colhedora CanaMax 5000</h3>
+        <p><strong>Serviço:</strong> Locação e Venda</p>
+        <p><strong>Região:</strong> Piracicaba, Limeira</p>
+      </div>
+    </div>
+
+    <div id="estatisticas" class="conteudo">
+      <div class="box">
+        <h2>128</h2>
+        <p>Visualizações</p>
+      </div>
+      <div class="box">
+        <h2>12</h2>
+        <p>Solicitações</p>
+      </div>
+    </div>
+
+    <div id="solicitacoes" class="conteudo">
+      <div class="solicitacao">
+        <h3>João Silva</h3>
+        <p><strong>Equipamento:</strong> Colhedora CanaMax 5000</p>
+        <p>Gostaria de saber o valor da locação para 30 dias.</p>
+        <div class="resposta">
+          <textarea rows="2" placeholder="Responder..."></textarea>
+          <button>Enviar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function mostrarAba(id) {
+      document.querySelectorAll('.conteudo').forEach(div => div.classList.remove('ativo'));
+      document.querySelectorAll('.abas button').forEach(btn => btn.classList.remove('ativo'));
+      document.getElementById(id).classList.add('ativo');
+      event.target.classList.add('ativo');
+    }
+  </script>
+
+</body>
+</html>
+<div class="painel-grafico">
+  <img src="painel_agrobioconecta.png" alt="Painel de estatísticas AgroBioConecta" style="width:100%; max-width:800px; border-radius:10px;" />
+</div>
+<img src="painel_agrobioconecta.png" alt="Gráficos de estatísticas AgroBioConecta" style="width:100%; max-width:800px; border-radius:10px;" />
+<section class="equipe">
+  <h2>Responsáveis pelo Projeto</h2>
+  <div class="membro">
+    <h3>Dayana Silva</h3>
+    <p>Idealizadora e coordenadora do AgroBioConecta. Responsável pela gestão e visão estratégica.</p>
+  </div>
+  <div class="membro">
+    <h3>Lucas Andrade</h3>
+    <p>Desenvolvedor Front-end. Responsável pela interface e experiência do usuário.</p>
+  </div>
+  <div class="membro">
+    <h3>Mariana Costa</h3>
+    <p>Analista de dados. Responsável pelos relatórios e integração com banco de dados.</p>
+  </div>
+</section>
+<section class="termos">
+  <h2>Termos de Uso</h2>
+  <p>O AgroBioConecta atua como uma vitrine digital para empresas do setor agroindustrial. As informações sobre serviços, preços e disponibilidade são de responsabilidade exclusiva das empresas cadastradas.</p>
+  <p>O site não realiza intermediação financeira, não participa de negociações e não se responsabiliza por acordos firmados entre as partes.</p>
+</section>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2e7d32;
+    }
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Termos de Uso</h1>
+    <p>O AgroBioConecta é uma plataforma digital que conecta empresas do setor agroindustrial a potenciais clientes interessados em seus serviços e equipamentos.</p>
+
+    <p>Nosso papel é exclusivamente de vitrine e divulgação. As informações sobre serviços, preços, disponibilidade e condições são de responsabilidade exclusiva das empresas cadastradas.</p>
+
+    <p>O AgroBioConecta não realiza intermediação comercial, financeira ou contratual. Toda negociação, contratação e prestação de serviço ocorre diretamente entre o cliente e a empresa fornecedora.</p>
+
+    <p>Ao utilizar a plataforma, o usuário reconhece que o AgroBioConecta não se responsabiliza por acordos, pagamentos, garantias, entregas ou qualquer relação comercial entre as partes.</p>
+
+    <h2>Política de Privacidade</h2>
+    <p>Coletamos apenas os dados necessários para o funcionamento da plataforma, como nome, e-mail e informações de contato fornecidas voluntariamente pelos usuários.</p>
+
+    <p>Esses dados são utilizados exclusivamente para facilitar o contato entre clientes e empresas. Não compartilhamos, vendemos ou utilizamos essas informações para fins externos.</p>
+
+    <p>Ao enviar uma solicitação ou se cadastrar, o usuário concorda com o uso dos dados conforme descrito nesta política.</p>
+
+    <p>Para dúvidas ou solicitações relacionadas à privacidade, entre em contato conosco pelo e-mail: contato@agrobioconecta.com.br</p>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2e7d32;
+    }
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+    .equipe {
+      margin-top: 30px;
+    }
+    .membro {
+      margin-bottom: 20px;
+    }
+    .membro h3 {
+      margin: 0;
+      color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sobre o AgroBioConecta</h1>
+    <p>O AgroBioConecta é uma plataforma digital criada para aproximar empresas do setor agroindustrial de potenciais clientes, promovendo visibilidade, conexão e oportunidades de negócio.</p>
+
+    <h2>Missão</h2>
+    <p>Conectar empresas agroindustriais a clientes de forma simples, transparente e eficiente, valorizando o desenvolvimento regional e a inovação no campo.</p>
+
+    <h2>Visão</h2>
+    <p>Ser referência nacional em soluções digitais para o setor agroindustrial, promovendo conexões que geram impacto positivo na produção, sustentabilidade e economia local.</p>
+
+    <h2>Valores</h2>
+    <ul>
+      <li>Transparência nas conexões</li>
+      <li>Valorização da produção local</li>
+      <li>Inovação com propósito</li>
+      <li>Respeito às relações comerciais</li>
+    </ul>
+
+    <div class="equipe">
+      <h2>Responsáveis pelo Projeto</h2>
+
+      <div class="membro">
+        <h3>Dayana Silva</h3>
+        <p>Idealizadora e coordenadora do AgroBioConecta. Responsável pela gestão estratégica e visão do projeto.</p>
+      </div>
+
+      <div class="membro">
+        <h3>Lucas Andrade</h3>
+        <p>Desenvolvedor Front-end. Responsável pela interface do usuário e experiência digital.</p>
+      </div>
+
+      <div class="membro">
+        <h3>Mariana Costa</h3>
+        <p>Analista de dados. Responsável pelos relatórios, estatísticas e integração com os dados reais da plataforma.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | AgroBioConecta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+    .info {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Fale Conosco</h1>
+    <form action="mailto:contato@agrobioconecta.com.br" method="post" enctype="text/plain">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <p class="info">O AgroBioConecta apenas conecta você à equipe responsável. Não realizamos intermediação comercial.</p>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </div>
+
+</body>
+</html>
+<section class="alunos">
+  <h2>Alunos do Curso de Biocombustível</h2>
+  <ul>
+    <li>Ana Beatriz Oliveira – Turma B1</li>
+    <li>Rafael Lima – Turma B1</li>
+    <li>Camila Souza – Turma B2</li>
+    <li>João Pedro Martins – Turma B2</li>
+  </ul>
+</section>
+<section class="alunos">
+  <h2>Alunos do Curso de Biocombustível – Turma B1 (2025)</h2>
+  <ul>
+    <li>Dayana de Fatima Lorena dos Santos Ferreira</li>
+    <li>Gabriela da Silva Nascimento</li>
+    <li>Cosme Arcanjo dos Santos</li>
+    <li>Renato José Pereira</li>
+  </ul>
+</section>
