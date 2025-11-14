@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empresas Sucroalcooleiras | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filtro { margin: 20px; padding: 20px; background-color: rgba(255,255,255,0.95); border-radius: 8px; }
+    .empresa { background-color: #e8f5e9; padding: 15px; margin: 10px 0; border-radius: 6px; }
+    .empresa h3 { margin: 0; color: #2e7d32; }
+    .empresa p { margin: 5px 0; }
+    #lista-empresas { padding: 0 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Empresas do Setor Sucroalcooleiro</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar empresas, serviços..." />
+      <button onclick="realizarBuscaGeral()">Buscar</button>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+
+  <div class="filtro">
+    <h3>Filtre por setor ou cidade</h3>
+    <label for="setor">Setor:</label>
+    <select id="setor">
+      <option value="">Todos</option>
+      <option value="industrial">Industrial</option>
+      <option value="logistica">Logística</option>
+      <option value="consultoria">Consultoria</option>
+    </select>
+
+    <label for="cidade">Cidade:</label>
+    <select id="cidade">
+      <option value="">Todas</option>
+      <option value="piracicaba">Piracicaba</option>
+      <option value="santa-barbara">Santa Bárbara d'Oeste</option>
+      <option value="rio-das-pedras">Rio das Pedras</option>
+    </select>
+
+    <button onclick="filtrarEmpresas()">Filtrar</button>
+  </div>
+
+  <div id="lista-empresas"></div>
+
+  <script>
+    const empresas = [
+      {
+        nome: "Usina Piracicaba",
+        setor: "industrial",
+        cidade: "piracicaba",
+        endereco: "Av. Cana-de-Açúcar, 1000",
+        telefone: "(19) 99709-3446"
+      },
+      {
+        nome: "TransBio Santa Bárbara",
+        setor: "logistica",
+        cidade: "santa-barbara",
+        endereco: "Rua Bioenergia, 200",
+        telefone: "(19) 3344-5566"
+      },
+      {
+        nome: "ConsultAgro Rio das Pedras",
+        setor: "consultoria",
+        cidade: "rio-das-pedras",
+        endereco: "Praça Central, 45",
+        telefone: "(19) 3322-7788"
+      },
+      {
+        nome: "AgroInd Piracicaba",
+        setor: "industrial",
+        cidade: "piracicaba",
+        endereco: "Rod. SP-304, km 12",
+        telefone: "(19) 3333-4444"
+      }
+    ];
+
+    function filtrarEmpresas() {
+      const setor = document.getElementById('setor').value;
+      const cidade = document.getElementById('cidade').value;
+      const lista = document.getElementById('lista-empresas');
+      lista.innerHTML = '';
+
+      const filtradas = empresas.filter(e => {
+        return (
+          (!setor || e.setor === setor) &&
+          (!cidade || e.cidade === cidade)
+        );
+      });
+
+      if (filtradas.length === 0) {
+        lista.innerHTML = '<p>Nenhuma empresa encontrada com os filtros selecionados.</p>';
+      } else {
+        filtradas.forEach(e => {
+          lista.innerHTML += `
+            <div class="empresa">
+              <h3>${e.nome}</h3>
+              <p><strong>Setor:</strong> ${e.setor}</p>
+              <p><strong>Cidade:</strong> ${formatarCidade(e.cidade)}</p>
+              <p><strong>Endereço:</strong> ${e.endereco}</p>
+              <p><strong>Telefone:</strong> ${e.telefone}</p>
+            </div>
+          `;
+        });
+      }
+    }
+
+    function formatarCidade(cidade) {
+      if (cidade === "piracicaba") return "Piracicaba";
+      if (cidade === "santa-barbara") return "Santa Bárbara d'Oeste";
+      if (cidade === "rio-das-pedras") return "Rio das Pedras";
+      return cidade;
+    }
+
+    function realizarBuscaGeral() {
+      const termo = document.getElementById('search-input').value.toLowerCase();
+      if (termo) {
+        const lista = document.getElementById('lista-empresas');
+        lista.innerHTML = '';
+
+        const filtradas = empresas.filter(e => {
+          return (
+            e.nome.toLowerCase().includes(termo) ||
+            e.setor.toLowerCase().includes(termo) ||
+            formatarCidade(e.cidade).toLowerCase().includes(termo) ||
+            e.endereco.toLowerCase().includes(termo)
+          );
+        });
+
+        if (filtradas.length === 0) {
+          lista.innerHTML = '<p style="padding: 20px; text-align: center;">Nenhuma empresa encontrada com o termo "' + termo + '".</p>';
+        } else {
+          filtradas.forEach(e => {
+            lista.innerHTML += `
+              <div class="empresa">
+                <h3>${e.nome}</h3>
+                <p><strong>Setor:</strong> ${e.setor}</p>
+                <p><strong>Cidade:</strong> ${formatarCidade(e.cidade)}</p>
+                <p><strong>Endereço:</strong> ${e.endereco}</p>
+                <p><strong>Telefone:</strong> ${e.telefone}</p>
+              </div>
+            `;
+          });
+        }
+      }
+    }
+
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        realizarBuscaGeral();
+      }
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const buscaTermo = urlParams.get('busca');
+    if (buscaTermo) {
+      document.getElementById('search-input').value = buscaTermo;
+      realizarBuscaGeral();
+    } else {
+      filtrarEmpresas();
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 AgroBioConecta | Telefone: (19) 99709-3446</p>
+  </footer>
+
+</body>
+</html>
