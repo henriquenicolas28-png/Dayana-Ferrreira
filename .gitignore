@@ -52,3 +52,11 @@ m4/lt~obsolete.m4
 # can automatically generate from config.status script
 # (which is called by configure script))
 Makefile
+
+node_modules/
+.netlify/
+*.log
+.env
+.DS_Store
+agrobioconecta.zip.zip
+*.txt

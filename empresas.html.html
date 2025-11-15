@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Empresas Sucroalcooleiras | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filtro { margin: 20px; }
+    .empresa { background-color: #e8f5e9; padding: 15px; margin: 10px 0; border-radius: 6px; }
+    .empresa h3 { margin: 0; }
+    .empresa p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Empresas do Setor Sucroalcooleiro</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="SOBRE.HTML">Sobre</a>
+      <a href="empresas.html.html">Empresas</a>
+      <a href="cadastro-empresa.html">Cadastrar Empresa</a>
+      <a href="CONTATO.HTML">Contato</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+    <p>Filtre por setor ou cidade</p>
+  </header>
+
+  <div class="filtro">
+    <label for="setor">Setor:</label>
+    <select id="setor">
+      <option value="">Todos</option>
+      <option value="industrial">Industrial</option>
+      <option value="logistica">Logística</option>
+      <option value="consultoria">Consultoria</option>
+    </select>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" placeholder="Digite a cidade" />
+
+    <button onclick="filtrarEmpresas()">Filtrar</button>
+  </div>
+
+  <div id="lista-empresas"></div>
+
+  <script>
+    let todasEmpresas = [];
+
+    async function carregarEmpresas() {
+      try {
+        const response = await fetch('/.netlify/functions/listar-empresas');
+        const data = await response.json();
+        todasEmpresas = data.empresas || [];
+        filtrarEmpresas();
+      } catch (error) {
+        console.error('Erro ao carregar empresas:', error);
+        document.getElementById('lista-empresas').innerHTML = 
+          '<p>Erro ao carregar empresas. Tente novamente mais tarde.</p>';
+      }
+    }
+
+    function filtrarEmpresas() {
+      const setor = document.getElementById('setor').value;
+      const cidade = document.getElementById('cidade').value.toLowerCase();
+      const lista = document.getElementById('lista-empresas');
+      lista.innerHTML = '';
+
+      const filtradas = todasEmpresas.filter(e => {
+        const cidadeMatch = !cidade || e.cidade.toLowerCase().includes(cidade);
+        const setorMatch = !setor || e.setor === setor;
+        return cidadeMatch && setorMatch;
+      });
+
+      if (filtradas.length === 0) {
+        lista.innerHTML = '<p>Nenhuma empresa encontrada com os filtros selecionados.</p>';
+      } else {
+        filtradas.forEach(e => {
+          const nomeExibicao = e.nomeFantasia || e.nomeEmpresa;
+          const telefoneExibicao = formatarTelefone(e.telefone);
+          const celularExibicao = e.celular ? formatarTelefone(e.celular) : '';
+          
+          lista.innerHTML += `
+            <div class="empresa">
+              <h3>${nomeExibicao}</h3>
+              <p><strong>Setor:</strong> ${formatarSetor(e.setor)}</p>
+              <p><strong>Descrição:</strong> ${e.descricao || 'Não informada'}</p>
+              <p><strong>Cidade:</strong> ${e.cidade} - ${e.estado}</p>
+              <p><strong>Endereço:</strong> ${e.endereco}</p>
+              <p><strong>Telefone:</strong> ${telefoneExibicao}</p>
+              ${celularExibicao ? `<p><strong>Celular:</strong> ${celularExibicao}</p>` : ''}
+              ${e.email ? `<p><strong>E-mail:</strong> ${e.email}</p>` : ''}
+              ${e.website ? `<p><strong>Website:</strong> <a href="${e.website}" target="_blank">${e.website}</a></p>` : ''}
+            </div>
+          `;
+        });
+      }
+    }
+
+    function formatarTelefone(telefone) {
+      const numeros = telefone.replace(/\D/g, '');
+      if (numeros.length === 10) {
+        return `(${numeros.substring(0,2)}) ${numeros.substring(2,6)}-${numeros.substring(6)}`;
+      } else if (numeros.length === 11) {
+        return `(${numeros.substring(0,2)}) ${numeros.substring(2,7)}-${numeros.substring(7)}`;
+      }
+      return telefone;
+    }
+
+    function formatarSetor(setor) {
+      const setores = {
+        'industrial': 'Industrial',
+        'logistica': 'Logística',
+        'consultoria': 'Consultoria',
+        'insumos': 'Insumos Agrícolas',
+        'tecnologia': 'Tecnologia Agrícola',
+        'bioenergia': 'Bioenergia',
+        'outros': 'Outros'
+      };
+      return setores[setor] || setor;
+    }
+
+    carregarEmpresas();
+  </script>
+
+</body>
+</html>
