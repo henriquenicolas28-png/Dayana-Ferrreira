@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Empresa | AgroBioConecta</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .error-message {
+      color: #d32f2f;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+    .success-message {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #388e3c;
+    }
+    .btn-submit {
+      background-color: #388e3c;
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .btn-submit:hover {
+      background-color: #2e7d32;
+    }
+    .btn-submit:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+    .info-box {
+      background-color: #e3f2fd;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border-left: 4px solid #2196f3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cadastro de Empresa</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="SOBRE.HTML">Sobre</a>
+      <a href="empresas.html.html">Empresas</a>
+      <a href="CONTATO.HTML">Contato</a>
+      <a href="termos.html">Termos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <div class="info-box">
+        <p><strong>Publique sua empresa no AgroBioConecta!</strong></p>
+        <p>Preencha os dados abaixo para cadastrar sua empresa. O CNPJ será validado automaticamente para garantir a legitimidade da empresa.</p>
+      </div>
+
+      <div class="success-message" id="successMessage">
+        Cadastro realizado com sucesso! Sua empresa será revisada e publicada em breve.
+      </div>
+
+      <form id="cadastroForm">
+        <div class="form-group">
+          <label for="cnpj">CNPJ *</label>
+          <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required maxlength="18" />
+          <div class="error-message" id="cnpjError">CNPJ inválido</div>
+        </div>
+
+        <div class="form-group">
+          <label for="nomeEmpresa">Nome da Empresa *</label>
+          <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Razão Social" required />
+        </div>
+
+        <div class="form-group">
+          <label for="nomeFantasia">Nome Fantasia</label>
+          <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Nome Fantasia" />
+        </div>
+
+        <div class="form-group">
+          <label for="setor">Setor *</label>
+          <select id="setor" name="setor" required>
+            <option value="">Selecione um setor</option>
+            <option value="industrial">Industrial</option>
+            <option value="logistica">Logística</option>
+            <option value="consultoria">Consultoria</option>
+            <option value="insumos">Insumos Agrícolas</option>
+            <option value="tecnologia">Tecnologia Agrícola</option>
+            <option value="bioenergia">Bioenergia</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição dos Serviços *</label>
+          <textarea id="descricao" name="descricao" placeholder="Descreva os principais serviços e produtos oferecidos pela sua empresa" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="endereco">Endereço Completo *</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade *</label>
+          <input type="text" id="cidade" name="cidade" placeholder="Cidade" required />
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado *</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione um estado</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="PR">Paraná</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="GO">Goiás</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone *</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000" required />
+        </div>
+
+        <div class="form-group">
+          <label for="celular">Celular</label>
+          <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="contato@empresa.com.br" required />
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" placeholder="https://www.empresa.com.br" />
+        </div>
+
+        <div class="loading" id="loading">
+          Validando CNPJ e enviando dados...
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Cadastrar Empresa</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgroBioConecta</p>
+  </footer>
+
+  <script>
+    const cnpjInput = document.getElementById('cnpj');
+    const telefoneInput = document.getElementById('telefone');
+    const celularInput = document.getElementById('celular');
+    const form = document.getElementById('cadastroForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const loading = document.getElementById('loading');
+    const successMessage = document.getElementById('successMessage');
+    const cnpjError = document.getElementById('cnpjError');
+
+    cnpjInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 14) {
+        value = value.replace(/^(\d{2})(\d)/, '$1.$2');
+        value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+        value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
+        value = value.replace(/(\d{4})(\d)/, '$1-$2');
+      }
+      e.target.value = value;
+    });
+
+    telefoneInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 10) {
+        value = value.replace(/^(\d{2})(\d)/, '($1) $2');
+        value = value.replace(/(\d{4})(\d)/, '$1-$2');
+      }
+      e.target.value = value;
+    });
+
+    celularInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 11) {
+        value = value.replace(/^(\d{2})(\d)/, '($1) $2');
+        value = value.replace(/(\d{5})(\d)/, '$1-$2');
+      }
+      e.target.value = value;
+    });
+
+    function validarCNPJ(cnpj) {
+      cnpj = cnpj.replace(/\D/g, '');
+      
+      if (cnpj.length !== 14) return false;
+      if (/^(\d)\1+$/.test(cnpj)) return false;
+
+      let tamanho = cnpj.length - 2;
+      let numeros = cnpj.substring(0, tamanho);
+      let digitos = cnpj.substring(tamanho);
+      let soma = 0;
+      let pos = tamanho - 7;
+
+      for (let i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+
+      let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(0)) return false;
+
+      tamanho = tamanho + 1;
+      numeros = cnpj.substring(0, tamanho);
+      soma = 0;
+      pos = tamanho - 7;
+
+      for (let i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+
+      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(1)) return false;
+
+      return true;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      cnpjError.style.display = 'none';
+      successMessage.style.display = 'none';
+
+      const cnpj = cnpjInput.value;
+      
+      if (!validarCNPJ(cnpj)) {
+        cnpjError.textContent = 'CNPJ inválido. Por favor, verifique o número digitado.';
+        cnpjError.style.display = 'block';
+        cnpjInput.focus();
+        return;
+      }
+
+      const formData = {
+        cnpj: cnpj.replace(/\D/g, ''),
+        nomeEmpresa: document.getElementById('nomeEmpresa').value,
+        nomeFantasia: document.getElementById('nomeFantasia').value,
+        setor: document.getElementById('setor').value,
+        descricao: document.getElementById('descricao').value,
+        endereco: document.getElementById('endereco').value,
+        cidade: document.getElementById('cidade').value,
+        estado: document.getElementById('estado').value,
+        telefone: document.getElementById('telefone').value,
+        celular: document.getElementById('celular').value,
+        email: document.getElementById('email').value,
+        website: document.getElementById('website').value,
+        dataCadastro: new Date().toISOString()
+      };
+
+      submitBtn.disabled = true;
+      loading.style.display = 'block';
+
+      try {
+        const response = await fetch('/.netlify/functions/cadastrar-empresa', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          successMessage.style.display = 'block';
+          form.reset();
+          window.scrollTo(0, 0);
+        } else {
+          cnpjError.textContent = result.message || 'Erro ao cadastrar empresa. Tente novamente.';
+          cnpjError.style.display = 'block';
+        }
+      } catch (error) {
+        cnpjError.textContent = 'Erro de conexão. Tente novamente mais tarde.';
+        cnpjError.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        loading.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
