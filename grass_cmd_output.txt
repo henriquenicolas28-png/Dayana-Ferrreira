@@ -1,0 +1,16 @@
+(Mon Sep  8 18:15:36 2025)                                                      
+g.region -p                                                                     
+projection: 3 (Latitude-Longitude)
+zone:       0
+datum:      wgs84
+ellipsoid:  wgs84
+north:      90N
+south:      90S
+west:       180W
+east:       180E
+nsres:      1
+ewres:      1
+rows:       180
+cols:       360
+cells:      64800
+(Mon Sep  8 18:15:37 2025) Comando terminado (0 segundos)                       
